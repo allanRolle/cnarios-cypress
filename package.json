@@ -2,5 +2,10 @@
   "devDependencies": {
     "cypress": "^15.12.0",
     "cypress-mochawesome-reporter": "^4.0.2"
+  },
+  "scripts": {
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open",
+    "test:e2e:headless": "cypress run --headless"
   }
 }
