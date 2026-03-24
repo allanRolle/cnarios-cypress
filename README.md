@@ -80,7 +80,7 @@
         <tr>
             <td>Unable to follow if button is desabled</td>
             <td>Button text should not change on click if button is desabled</td>
-            <td>Positive</td>
+            <td>Negative</td>
             <td>Medium</td>
         </tr>
         <tr>

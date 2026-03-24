@@ -139,5 +139,25 @@ describe('example to-do app', () => {
       // Finally, make sure that the clear button no longer exists.
       cy.contains('Clear completed').should('not.exist')
     })
+
+    it('can delete a completed task', () => {
+      // In order to delete a task, we need to hover over the task to reveal the delete button
+      // and then click the button. We can use the `invoke` command to trigger the hover state
+      // on the element and then find the delete button and click it.
+      cy.contains('Pay electric bill')
+        .parent()
+        .invoke('show')
+        .find('.destroy')
+        .click({ force: true })
+
+      // Then we can make sure that there is only one element
+      // in the list and our element does not exist
+      cy.get('.todo-list li')
+        .should('have.length', 1)
+        .should('not.have.text', 'Pay electric bill')
+
+      // Finally, make sure that the clear button no longer exists.
+      cy.contains('Clear completed').should('not.exist')
+    })
   })
 })

@@ -22,7 +22,7 @@ jobs:
       - name: Run Cypress tests
         run: npm run test:e2e
 
-      - name: Upload reports
+      - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
