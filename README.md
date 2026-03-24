@@ -74,15 +74,9 @@
         <tr>
             <td>Unable to follow if button is clicked multiple times (spam/debounce)</td>
             <td>Button is put under stress</td>
-            <td>Positive</td>
-            <td>Medium</td>
-        </tr> 
-        <tr>
-            <td>Unable to follow if button is desabled</td>
-            <td>Button text should not change on click if button is desabled</td>
             <td>Negative</td>
             <td>Medium</td>
-        </tr>
+        </tr> 
         <tr>
             <td>Button remains functional when visually hidden</td>
             <td>Button is visually hidden</td>
