@@ -1,0 +1,174 @@
+[
+  {
+    "testCase": "Cas nominal - Inscription valide avec confirmation",
+    "name": "Jean Dupont",
+    "email": "jean.dupont@example.com",
+    "phoneNumber": "0612345678",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 2,
+    "expectedStatus": "valid",
+    "shouldConfirm": true
+  },
+  {
+    "testCase": "Cas nominal - Inscription valide",
+    "name": "Jean Dupont",
+    "email": "jean.dupont@example.com",
+    "phoneNumber": "0612345678",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 2,
+    "expectedStatus": "valid"
+  },
+  {
+    "testCase": "Vérification de la réinitialisation du formulaire",
+    "name": "Test Reset",
+    "email": "reset@test.com",
+    "phoneNumber": "0123456789",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 5,
+    "expectedStatus": "reset"
+  },
+  {
+    "testCase": "Cas nominal - Inscription valide",
+    "name": "Jean Dupont",
+    "email": "jean.dupont@example.com",
+    "phoneNumber": "0612345678",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 2,
+    "expectedStatus": "valid"
+  },
+  {
+    "testCase": "Valeur limite basse - Nom 3 caractères et 1 ticket",
+    "name": "Ari",
+    "email": "ari@test.io",
+    "phoneNumber": "0123456",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 1,
+    "expectedStatus": "valid"
+  },
+  {
+    "testCase": "Limite Haute Nom - 100+ caractères (Vérification troncature/UI)",
+    "name": "Jean-Baptiste Francois de la Villardiere de Saint-Quentin-en-Yvelines",
+    "email": "test@domain.com",
+    "phoneNumber": "0123456789",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 1,
+    "expectedStatus": "valid"
+  },
+  {
+    "testCase": "Valeur limite haute - 15 chiffres et 10 tickets",
+    "name": "Marie-Christine de la Roche",
+    "email": "marie.c@domain.corporate",
+    "phoneNumber": "003361234567890",
+    "event": "Automation Summit",
+    "numberOfTickets": 10,
+    "expectedStatus": "valid"
+  },
+  {
+    "testCase": "Email avec alias et sous-domaine (RFC 5322)",
+    "name": "Expert Test",
+    "email": "dev+cypress@sub.domain.training",
+    "phoneNumber": "0123456789",
+    "event": "Automation Summit",
+    "numberOfTickets": 1,
+    "expectedStatus": "valid"
+  },
+  {
+    "testCase": "Erreur - Champ Nom uniquement composé d'espaces",
+    "name": "   ",
+    "email": "test@test.com",
+    "phoneNumber": "0123456789",
+    "event": "Automation Summit",
+    "numberOfTickets": 1,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter at least 3 characters",
+    "errorField": "name"
+  },
+  {
+    "testCase": "Erreur - Champ Nom inférieur à 3 caractères (2 charactères)",
+    "name": "Jo",
+    "email": "test@test.com",
+    "phoneNumber": "0123456789",
+    "event": "Automation Summit",
+    "numberOfTickets": 1,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter at least 3 characters",
+    "errorField": "name"
+  },
+  {
+    "testCase": "Échec - Email invalide",
+    "name": "Marc Antoine",
+    "email": "marc@invalide",
+    "phoneNumber": "0600000000",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 3,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter a valid email address",
+    "errorField": "email"
+  },
+  {
+    "testCase": "Erreur - Téléphone trop court (6 chiffres)",
+    "name": "Jean Doe",
+    "email": "jean@test.com",
+    "phoneNumber": "123456",
+    "event": "Automation Summit",
+    "numberOfTickets": 5,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter a valid phone (7-15 digits)",
+    "errorField": "phoneNumber"
+  },
+  {
+    "testCase": "Échec - Téléphone alphabétique",
+    "name": "Sophie Martin",
+    "email": "sophie@test.fr",
+    "phoneNumber": "asasa",
+    "event": "Frontend Conf 2025",
+    "numberOfTickets": 5,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter a valid phone (7-15 digits)",
+    "errorField": "phoneNumber"
+  },
+  {
+    "testCase": "Erreur - Téléphone trop long (16 chiffres)",
+    "name": "Jean Doe",
+    "email": "jean@test.com",
+    "phoneNumber": "1234567890123456",
+    "event": "Automation Summit",
+    "numberOfTickets": 5,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter a valid phone (7-15 digits)",
+    "errorField": "phoneNumber"
+  },
+  {
+    "testCase": "Échec - Nombre de tickets hors limite (0)",
+    "name": "Lucas Bernard",
+    "email": "lucas@email.com",
+    "phoneNumber": "0788990011",
+    "event": "Automation Summit",
+    "numberOfTickets": 0,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter an integer between 1 and 10",
+    "errorField": "numberOfTickets"
+  },
+  {
+    "testCase": "Erreur - Tickets hors limite haute (11)",
+    "name": "Jean Doe",
+    "email": "jean@test.com",
+    "phoneNumber": "0123456789",
+    "event": "Design & UX Meetup",
+    "numberOfTickets": 11,
+    "expectedStatus": "invalid",
+    "errorMessage": "Enter an integer between 1 and 10",
+    "errorField": "numberOfTickets"
+  },
+  {
+    "testCase": "Erreur - Aucun événement sélectionné",
+    "name": "Jean Doe",
+    "email": "jean@test.com",
+    "phoneNumber": "0123456789",
+    "event": "-- Select --",
+    "numberOfTickets": 1,
+    "expectedStatus": "invalid",
+    "errorMessage": "Please select an event",
+    "errorField": "event"
+  }
+]
