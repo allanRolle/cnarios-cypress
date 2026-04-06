@@ -180,33 +180,33 @@
 .
 ├── 📁 .github/
 │   └── 📁 workflows/
-│       └── 📄 cnarios-cypress.yml      # Pipeline CI/CD (GitHub Actions)
-├── 📁 .vscode/                         # Configuration de l'éditeur
-├── 📁 assets/                          # Ressources statiques (images, etc.)
+│       └── 📄 cnarios-cypress.yml          # Pipeline CI/CD (GitHub Actions)
+├── 📁 .vscode/                             # Configuration de l'éditeur
+├── 📁 assets/                              # Ressources statiques (images, etc.)
 ├── 📁 cypress/
-│   ├── 📁 e2e/                         # Dossier des tests de bout en bout
+│   ├── 📁 e2e/                             # Dossier des tests de bout en bout
 │   │   └── 📁 concepts/
-│   │       ├── 📄 button.cy.js         # Test spec pour les boutons
-│   │       └── 📄 formRegistration.cy.js # Test spec principal (Formulaire)
-│   ├── 📁 fixtures/                    # Jeux de données (Data-Driven Testing)
+│   │       ├── 📄 button.cy.js             # Test spec pour les boutons
+│   │       └── 📄 formRegistration.cy.js   # Test spec principal (Formulaire)
+│   ├── 📁 fixtures/                        # Jeux de données (Data-Driven Testing)
 │   │   └── 📄 formRegistrationData.json
-│   ├── 📁 reports/                     # Rapports de tests générés
+│   ├── 📁 reports/                         # Rapports de tests générés
 │   │   ├── 📁 assets/
-│   │   ├── 📁 screenshots/             # Captures en cas d'échec
-│   │   └── 📄 report.html              # Rapport HTML final
-│   ├── 📁 screenshots/                 # Dossier par défaut des captures Cypress
-│   ├── 📁 support/                     # Configuration et commandes personnalisées
-│   │   ├── 📁 pages/                   # Page Object Model (POM)
-│   │   │   ├── 📄 buttonPage.js        # Logique de la page boutons
-│   │   │   └── 📄 formPage.js          # Logique de la page formulaire
-│   │   ├── 📄 commands.js              # Custom commands (cy.login, etc.)
-│   │   └── 📄 e2e.js                   # Configuration globale des tests
-├── 📁 node_modules/                    # Dépendances du projet
-├── 📄 .gitignore                       # Fichiers à exclure de Git
-├── 📄 .prettierignore                  # Fichiers à exclure du formatage Prettier
-├── 📄 cypress.config.js                # Configuration principale de Cypress
-├── 📄 package-lock.json                # Verrouillage des versions NPM
-├── 📄 package.json                     # Scripts et dépendances NPM
-└── 📄 README.md                        # Documentation du projet
+│   │   ├── 📁 screenshots/                 # Captures en cas d'échec
+│   │   └── 📄 report.html                  # Rapport HTML final
+│   ├── 📁 screenshots/                     # Dossier par défaut des captures Cypress
+│   ├── 📁 support/                         # Configuration et commandes personnalisées
+│   │   ├── 📁 pages/                       # Page Object Model (POM)
+│   │   │   ├── 📄 buttonPage.js            # Logique de la page boutons
+│   │   │   └── 📄 formPage.js              # Logique de la page formulaire
+│   │   ├── 📄 commands.js                  # Custom commands (cy.login, etc.)
+│   │   └── 📄 e2e.js                       # Configuration globale des tests
+├── 📁 node_modules/                        # Dépendances du projet
+├── 📄 .gitignore                           # Fichiers à exclure de Git
+├── 📄 .prettierignore                      # Fichiers à exclure du formatage Prettier
+├── 📄 cypress.config.js                    # Configuration principale de Cypress
+├── 📄 package-lock.json                    # Verrouillage des versions NPM
+├── 📄 package.json                         # Scripts et dépendances NPM
+└── 📄 README.md                            # Documentation du projet
 </pre>
 

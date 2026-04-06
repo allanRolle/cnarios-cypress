@@ -20,12 +20,13 @@ jobs:
         run: mkdir -p cypress/reports
 
       - name: Run Cypress tests
-        run: npm run test:e2e
+        run: npm run test:e2e:ci
         continue-on-error: true
 
       - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: cypress-reports
+          name: cypress-report-html
           path: cypress/reports/
+          retention-days: 30

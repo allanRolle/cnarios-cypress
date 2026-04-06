@@ -5,8 +5,9 @@
   },
   "scripts": {
     "clean:reports": "rm -rf cypress/reports/*",
-    "test:e2e": "npm run clean:reports && cypress run --reporter cypress-mochawesome-reporter",
-    "test:e2e:open": "cypress open",
-    "test:e2e:headless": "cypress run --headless"
+    "pretest:e2e:ci": "npm run clean:reports",
+    "test:e2e:ci": "cypress run --reporter cypress-mochawesome-reporter",
+    "test:e2e": "cypress run",
+    "test:e2e:open": "cypress open"
   }
 }
